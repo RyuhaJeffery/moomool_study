@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const primaryColor = primary;
+const secondaryColor = secondary;
 
 const MaterialColor primary = MaterialColor(0xff266665, {
   50: Color(0xffE2F8F9),
@@ -15,8 +16,21 @@ const MaterialColor primary = MaterialColor(0xff266665, {
   900: Color(0xff266665),
 });
 
+const MaterialColor secondary = MaterialColor(0xff266665, {
+  50: Color(0xffFBF2DE),
+  100: Color(0xffF6DDAD),
+  200: Color(0xffF0C777),
+  300: Color(0xffEAB13E),
+  400: Color(0xffE7A001),
+  500: Color(0xffE49100),
+  600: Color(0xffE18500),
+  700: Color(0xffDC7600),
+  800: Color(0xffD76600),
+  900: Color(0xffCF4C00),
+});
+
 const MaterialColor onSurface = MaterialColor(0xff242424, {
-  50: Color(0xfffffff),
+  50: Color(0xffffffff),
   100: Color(0xffE9E9E9),
   200: Color(0xffC1C1C1),
   300: Color(0xffC4C4C4),

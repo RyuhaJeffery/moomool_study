@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:moomool/Theme/text_styles.dart';
 import 'package:moomool/Theme/themes.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,12 +11,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      //여기서 theme 적용
-      theme: lightTheme1,
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
+    return ScreenUtilInit(
+        designSize: Size(360, 640),
+        builder: () => MaterialApp(
+              title: 'Flutter Demo',
+              //여기서 theme 적용
+              theme: lightTheme1,
+              home: MyHomePage(title: 'Flutter Demo Home Page'),
+            ));
   }
 }
 
@@ -72,16 +76,27 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
+              style: body2Style(),
             ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headline4,
             ),
             //
-            TextField(
-              decoration: InputDecoration(
-                labelText: 'ID',
+            SizedBox(
+              width: 240,
+              child: TextFormField(
+                decoration: InputDecoration(
+                  labelText: 'ID',
+                  hintText: 'ID를 입력하세요',
+                ),
+                //style: ,
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {},
+              child: Text('로그인'),
+              style: ElevatedButton.styleFrom(),
             )
           ],
         ),
